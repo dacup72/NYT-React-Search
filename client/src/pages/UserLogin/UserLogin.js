@@ -22,7 +22,9 @@ class UserLogin extends Component {
       name: this.state.name,
       password: this.state.password
     };
-    API.loginUser(userData).then(res => res.redirect("/home"));
+    API.loginUser(userData).then(res => {
+      res.redirect("/home");
+    })
   };
 
   handleFormSubmit = event => {
